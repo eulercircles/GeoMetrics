@@ -12,7 +12,12 @@ namespace GeoMetrics
 		private readonly Font _normalFont;
 		private readonly Font _errorFont;
 
-		public ImperialDenominators Denominator { get; set; }
+		private ImperialDenominators _denominator = ImperialDenominators.HundredTwentyEighth;
+		public ImperialDenominators Denominator
+		{
+			get { return _denominator; }
+			set { _denominator = value; }
+		}
 
 		public FractionalInchTextBox()
 		{
@@ -28,6 +33,15 @@ namespace GeoMetrics
 			TextChanged += HandleTextChanged;
 			GotFocus += HandleGotFocus;
 			LostFocus += HandleLostFocus;
+		}
+
+		public double? GetRawValue()
+		{
+			if (ImperialMeasure.TryParse(Text, out ImperialMeasure? result))
+			{
+				return result.Value.DecimalInches;
+			}
+			else { return null; }
 		}
 
 		private void HandleGotFocus(object sender, EventArgs e)
