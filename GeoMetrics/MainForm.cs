@@ -12,36 +12,52 @@ namespace GeoMetrics
 		public MainForm()
 		{
 			InitializeComponent();
+
+			textBox_ALength.Text = "---";
+			textBox_BLength.Text = "---";
+			textBox_Angle.Text = "---";
 		}
 
-		private void FractionalInchTextBoxA_Leave(object sender, EventArgs e)
+		private void FractionalInchTextBox_Leave(object sender, EventArgs e)
 		{
-			var xValue = fractionalInchTextBox_AX.GetRawValue();
-			var yValue = fractionalInchTextBox_AY.GetRawValue();
-			var zValue = fractionalInchTextBox_AZ.GetRawValue();
+			var axValue = fractionalInchTextBox_AX.GetRawValue();
+			var ayValue = fractionalInchTextBox_AY.GetRawValue();
+			var azValue = fractionalInchTextBox_AZ.GetRawValue();
 
-			if (xValue.HasValue && yValue.HasValue && zValue.HasValue)
+			var bxValue = fractionalInchTextBox_BX.GetRawValue();
+			var byValue = fractionalInchTextBox_BY.GetRawValue();
+			var bzValue = fractionalInchTextBox_BZ.GetRawValue();
+
+			Nullable<Vector3> vectorA = null;
+			Nullable<Vector3> vectorB = null;
+			Nullable<ImperialMeasure> vectorAMeasure = null;
+			Nullable<ImperialMeasure> vectorBMeasure = null;
+
+			if (axValue.HasValue && ayValue.HasValue && azValue.HasValue)
 			{
-				var vector = new Vector3((float)xValue.Value, (float)yValue.Value, (float)zValue.Value);
-
-				var measure = new ImperialMeasure(vector.Length());
-				textBox_ALength.Text = measure.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				vectorA = new Vector3((float)axValue.Value, (float)ayValue.Value, (float)azValue.Value);
+				vectorAMeasure = new ImperialMeasure(vectorA.Value.Length());
+				textBox_ALength.Text = vectorAMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
 			}
-		}
+			else { textBox_ALength.Text = "---"; }
 
-		private void FractionalInchTextBoxB_Leave(object sender, EventArgs e)
-		{
-			var xValue = fractionalInchTextBox_BX.GetRawValue();
-			var yValue = fractionalInchTextBox_BY.GetRawValue();
-			var zValue = fractionalInchTextBox_BZ.GetRawValue();
-
-			if (xValue.HasValue && yValue.HasValue && zValue.HasValue)
+			if (bxValue.HasValue && byValue.HasValue && bzValue.HasValue)
 			{
-				var vector = new Vector3((float)xValue.Value, (float)yValue.Value, (float)zValue.Value);
-
-				var measure = new ImperialMeasure(vector.Length());
-				textBox_BLength.Text = measure.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				vectorB = new Vector3((float)bxValue.Value, (float)byValue.Value, (float)bzValue.Value);
+				vectorBMeasure = new ImperialMeasure(vectorB.Value.Length());
+				textBox_BLength.Text = vectorBMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
 			}
+			else { textBox_BLength.Text = "---"; }
+
+			if (vectorA.HasValue && vectorB.HasValue && vectorAMeasure.HasValue && vectorBMeasure.HasValue)
+			{
+				var dot = Vector3.Dot(vectorA.Value, vectorB.Value);
+				var length = (vectorA.Value.Length() * vectorB.Value.Length());
+
+				var angleMeasure = Math.Acos(dot / length);
+				textBox_Angle.Text = $"{Math.Round(angleMeasure, 1, MidpointRounding.AwayFromZero)}°";
+			}
+			else { textBox_Angle.Text = "---"; }
 		}
 	}
 }
