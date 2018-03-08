@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Numerics;
 
 using FlintLib.Geometrics;
+using FlintLib.Mathematics;
 
 namespace GeoMetrics
 {
@@ -13,51 +14,48 @@ namespace GeoMetrics
 		{
 			InitializeComponent();
 
-			textBox_ALength.Text = "---";
-			textBox_BLength.Text = "---";
-			textBox_Angle.Text = "---";
+			textBox_3dAngle_ALength.Text = "---";
+			textBox_3dAngle_BLength.Text = "---";
+			textBox_3dAngle_Angle.Text = "---";
 		}
 
-		private void FractionalInchTextBox_Leave(object sender, EventArgs e)
+		private void FractionalInchTextBox_3dAngle_Leave(object sender, EventArgs e)
 		{
-			var axValue = fractionalInchTextBox_AX.GetRawValue();
-			var ayValue = fractionalInchTextBox_AY.GetRawValue();
-			var azValue = fractionalInchTextBox_AZ.GetRawValue();
+			var axValue = fractionalInchTextBox_3dAngle_AX.GetRawValue();
+			var ayValue = fractionalInchTextBox_3dAngle_AY.GetRawValue();
+			var azValue = fractionalInchTextBox_3dAngle_AZ.GetRawValue();
 
-			var bxValue = fractionalInchTextBox_BX.GetRawValue();
-			var byValue = fractionalInchTextBox_BY.GetRawValue();
-			var bzValue = fractionalInchTextBox_BZ.GetRawValue();
+			var bxValue = fractionalInchTextBox_3dAngle_BX.GetRawValue();
+			var byValue = fractionalInchTextBox_3dAngle_BY.GetRawValue();
+			var bzValue = fractionalInchTextBox_3dAngle_BZ.GetRawValue();
 
-			Nullable<Vector3> vectorA = null;
-			Nullable<Vector3> vectorB = null;
-			Nullable<ImperialMeasure> vectorAMeasure = null;
-			Nullable<ImperialMeasure> vectorBMeasure = null;
+			Vector3? vectorA = null;
+			Vector3? vectorB = null;
+			ImperialMeasure? vectorAMeasure = null;
+			ImperialMeasure? vectorBMeasure = null;
 
 			if (axValue.HasValue && ayValue.HasValue && azValue.HasValue)
 			{
 				vectorA = new Vector3((float)axValue.Value, (float)ayValue.Value, (float)azValue.Value);
 				vectorAMeasure = new ImperialMeasure(vectorA.Value.Length());
-				textBox_ALength.Text = vectorAMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				textBox_3dAngle_ALength.Text = vectorAMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
 			}
-			else { textBox_ALength.Text = "---"; }
+			else { textBox_3dAngle_ALength.Text = "---"; }
 
 			if (bxValue.HasValue && byValue.HasValue && bzValue.HasValue)
 			{
 				vectorB = new Vector3((float)bxValue.Value, (float)byValue.Value, (float)bzValue.Value);
 				vectorBMeasure = new ImperialMeasure(vectorB.Value.Length());
-				textBox_BLength.Text = vectorBMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				textBox_3dAngle_BLength.Text = vectorBMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
 			}
-			else { textBox_BLength.Text = "---"; }
+			else { textBox_3dAngle_BLength.Text = "---"; }
 
 			if (vectorA.HasValue && vectorB.HasValue && vectorAMeasure.HasValue && vectorBMeasure.HasValue)
 			{
-				var dot = Vector3.Dot(vectorA.Value, vectorB.Value);
-				var length = (vectorA.Value.Length() * vectorB.Value.Length());
-
-				var angleMeasure = Math.Acos(dot / length);
-				textBox_Angle.Text = $"{Math.Round(angleMeasure, 1, MidpointRounding.AwayFromZero)}°";
+				var angleMeasure = Functions.DegreeAngle(vectorA.Value, vectorB.Value);
+				textBox_3dAngle_Angle.Text = $"{Math.Round(angleMeasure, 1, MidpointRounding.AwayFromZero)}°";
 			}
-			else { textBox_Angle.Text = "---"; }
+			else { textBox_3dAngle_Angle.Text = "---"; }
 		}
 	}
 }
