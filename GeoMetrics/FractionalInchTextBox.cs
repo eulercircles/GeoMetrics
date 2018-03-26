@@ -12,8 +12,8 @@ namespace GeoMetrics
 		private readonly Font _normalFont;
 		private readonly Font _errorFont;
 
-		private ImperialDenominators _denominator = ImperialDenominators.HundredTwentyEighth;
-		public ImperialDenominators Denominator
+		private CustomaryDenominators _denominator = CustomaryDenominators.HundredTwentyEighth;
+		public CustomaryDenominators Denominator
 		{
 			get { return _denominator; }
 			set { _denominator = value; }
@@ -37,7 +37,7 @@ namespace GeoMetrics
 
 		public double? GetRawValue()
 		{
-			if (ImperialMeasure.TryParse(Text, out ImperialMeasure? result))
+			if (CustomaryLength.TryParse(Text, out CustomaryLength? result))
 			{
 				return result.Value.DecimalInches;
 			}
@@ -53,7 +53,7 @@ namespace GeoMetrics
 		{
 			if (!string.IsNullOrEmpty(Text))
 			{
-				ImperialMeasure.TryParse(Text, out ImperialMeasure? parsedValue);
+				CustomaryLength.TryParse(Text, out CustomaryLength? parsedValue);
 				if (parsedValue.HasValue)
 				{
 					Text = parsedValue.Value.ToFractionalInchString();

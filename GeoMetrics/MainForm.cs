@@ -30,22 +30,22 @@ namespace GeoMetrics
 
 			Nullable<Vector3> vectorA = null;
 			Nullable<Vector3> vectorB = null;
-			Nullable<ImperialMeasure> vectorAMeasure = null;
-			Nullable<ImperialMeasure> vectorBMeasure = null;
+			Nullable<CustomaryLength> vectorAMeasure = null;
+			Nullable<CustomaryLength> vectorBMeasure = null;
 
 			if (axValue.HasValue && ayValue.HasValue && azValue.HasValue)
 			{
 				vectorA = new Vector3((float)axValue.Value, (float)ayValue.Value, (float)azValue.Value);
-				vectorAMeasure = new ImperialMeasure(vectorA.Value.Length());
-				textBox_ALength.Text = vectorAMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				vectorAMeasure = new CustomaryLength(vectorA.Value.Length());
+				textBox_ALength.Text = vectorAMeasure.Value.ToFractionalInchString(CustomaryDenominators.ThirtySecond);
 			}
 			else { textBox_ALength.Text = "---"; }
 
 			if (bxValue.HasValue && byValue.HasValue && bzValue.HasValue)
 			{
 				vectorB = new Vector3((float)bxValue.Value, (float)byValue.Value, (float)bzValue.Value);
-				vectorBMeasure = new ImperialMeasure(vectorB.Value.Length());
-				textBox_BLength.Text = vectorBMeasure.Value.ToFractionalInchString(ImperialDenominators.ThirtySecond);
+				vectorBMeasure = new CustomaryLength(vectorB.Value.Length());
+				textBox_BLength.Text = vectorBMeasure.Value.ToFractionalInchString(CustomaryDenominators.ThirtySecond);
 			}
 			else { textBox_BLength.Text = "---"; }
 
