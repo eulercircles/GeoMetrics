@@ -28,15 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.fractionalInchTextBox_AX = new GeoMetrics.FractionalInchTextBox();
-			this.fractionalInchTextBox_AY = new GeoMetrics.FractionalInchTextBox();
-			this.fractionalInchTextBox_AZ = new GeoMetrics.FractionalInchTextBox();
-			this.textBox_ALength = new System.Windows.Forms.TextBox();
-			this.textBox_BLength = new System.Windows.Forms.TextBox();
-			this.fractionalInchTextBox_BZ = new GeoMetrics.FractionalInchTextBox();
-			this.fractionalInchTextBox_BY = new GeoMetrics.FractionalInchTextBox();
-			this.fractionalInchTextBox_BX = new GeoMetrics.FractionalInchTextBox();
-			this.textBox_Angle = new System.Windows.Forms.TextBox();
+			this.fractionalInchTextBox_3dAngle_AX = new GeoMetrics.FractionalInchTextBox();
+			this.fractionalInchTextBox_3dAngle_AY = new GeoMetrics.FractionalInchTextBox();
+			this.fractionalInchTextBox_3dAngle_AZ = new GeoMetrics.FractionalInchTextBox();
+			this.textBox_3dAngle_ALength = new System.Windows.Forms.TextBox();
+			this.textBox_3dAngle_BLength = new System.Windows.Forms.TextBox();
+			this.fractionalInchTextBox_3dAngle_BZ = new GeoMetrics.FractionalInchTextBox();
+			this.fractionalInchTextBox_3dAngle_BY = new GeoMetrics.FractionalInchTextBox();
+			this.fractionalInchTextBox_3dAngle_BX = new GeoMetrics.FractionalInchTextBox();
+			this.textBox_3dAngle_Angle = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
 			this.tabPage_GoldenRatio.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// fractionalInchTextBox_AX
+			// fractionalInchTextBox_3dAngle_AX
 			// 
 			this.fractionalInchTextBox_AX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_AX.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -69,7 +69,7 @@
 			this.fractionalInchTextBox_AX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_AX.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// fractionalInchTextBox_AY
+			// fractionalInchTextBox_3dAngle_AY
 			// 
 			this.fractionalInchTextBox_AY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_AY.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -81,7 +81,7 @@
 			this.fractionalInchTextBox_AY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_AY.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// fractionalInchTextBox_AZ
+			// fractionalInchTextBox_3dAngle_AZ
 			// 
 			this.fractionalInchTextBox_AZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_AZ.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -93,25 +93,25 @@
 			this.fractionalInchTextBox_AZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_AZ.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// textBox_ALength
+			// textBox_3dAngle_ALength
 			// 
-			this.textBox_ALength.Location = new System.Drawing.Point(352, 27);
-			this.textBox_ALength.Name = "textBox_ALength";
-			this.textBox_ALength.ReadOnly = true;
-			this.textBox_ALength.Size = new System.Drawing.Size(100, 20);
-			this.textBox_ALength.TabIndex = 3;
-			this.textBox_ALength.TabStop = false;
+			this.textBox_3dAngle_ALength.Location = new System.Drawing.Point(352, 27);
+			this.textBox_3dAngle_ALength.Name = "textBox_3dAngle_ALength";
+			this.textBox_3dAngle_ALength.ReadOnly = true;
+			this.textBox_3dAngle_ALength.Size = new System.Drawing.Size(100, 20);
+			this.textBox_3dAngle_ALength.TabIndex = 3;
+			this.textBox_3dAngle_ALength.TabStop = false;
 			// 
-			// textBox_BLength
+			// textBox_3dAngle_BLength
 			// 
-			this.textBox_BLength.Location = new System.Drawing.Point(352, 53);
-			this.textBox_BLength.Name = "textBox_BLength";
-			this.textBox_BLength.ReadOnly = true;
-			this.textBox_BLength.Size = new System.Drawing.Size(100, 20);
-			this.textBox_BLength.TabIndex = 7;
-			this.textBox_BLength.TabStop = false;
+			this.textBox_3dAngle_BLength.Location = new System.Drawing.Point(352, 53);
+			this.textBox_3dAngle_BLength.Name = "textBox_3dAngle_BLength";
+			this.textBox_3dAngle_BLength.ReadOnly = true;
+			this.textBox_3dAngle_BLength.Size = new System.Drawing.Size(100, 20);
+			this.textBox_3dAngle_BLength.TabIndex = 7;
+			this.textBox_3dAngle_BLength.TabStop = false;
 			// 
-			// fractionalInchTextBox_BZ
+			// fractionalInchTextBox_3dAngle_BZ
 			// 
 			this.fractionalInchTextBox_BZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_BZ.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -123,7 +123,7 @@
 			this.fractionalInchTextBox_BZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_BZ.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// fractionalInchTextBox_BY
+			// fractionalInchTextBox_3dAngle_BY
 			// 
 			this.fractionalInchTextBox_BY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_BY.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -135,7 +135,7 @@
 			this.fractionalInchTextBox_BY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_BY.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// fractionalInchTextBox_BX
+			// fractionalInchTextBox_3dAngle_BX
 			// 
 			this.fractionalInchTextBox_BX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
 			this.fractionalInchTextBox_BX.Denominator = FlintLib.Geometrics.CustomaryDenominators.ThirtySecond;
@@ -147,14 +147,14 @@
 			this.fractionalInchTextBox_BX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.fractionalInchTextBox_BX.Leave += new System.EventHandler(this.FractionalInchTextBox_Leave);
 			// 
-			// textBox_Angle
+			// textBox_3dAngle_Angle
 			// 
-			this.textBox_Angle.Location = new System.Drawing.Point(92, 89);
-			this.textBox_Angle.Name = "textBox_Angle";
-			this.textBox_Angle.ReadOnly = true;
-			this.textBox_Angle.Size = new System.Drawing.Size(100, 20);
-			this.textBox_Angle.TabIndex = 8;
-			this.textBox_Angle.TabStop = false;
+			this.textBox_3dAngle_Angle.Location = new System.Drawing.Point(92, 89);
+			this.textBox_3dAngle_Angle.Name = "textBox_3dAngle_Angle";
+			this.textBox_3dAngle_Angle.ReadOnly = true;
+			this.textBox_3dAngle_Angle.Size = new System.Drawing.Size(100, 20);
+			this.textBox_3dAngle_Angle.TabIndex = 8;
+			this.textBox_3dAngle_Angle.TabStop = false;
 			// 
 			// label1
 			// 
@@ -269,9 +269,15 @@
 			// 
 			// tabPage_GoldenRatio
 			// 
-			this.tabPage_GoldenRatio.Controls.Add(this.textBox2);
+			this.tabPage_GoldenRatio.Controls.Add(this.label10);
+			this.tabPage_GoldenRatio.Controls.Add(this.label11);
+			this.tabPage_GoldenRatio.Controls.Add(this.label9);
+			this.tabPage_GoldenRatio.Controls.Add(this.label8);
 			this.tabPage_GoldenRatio.Controls.Add(this.textBox1);
-			this.tabPage_GoldenRatio.Controls.Add(this.fractionalInchTextBox1);
+			this.tabPage_GoldenRatio.Controls.Add(this.textBox2);
+			this.tabPage_GoldenRatio.Controls.Add(this.textBox_GoldenRatio_UpperOutput);
+			this.tabPage_GoldenRatio.Controls.Add(this.textBox_GoldenRatio_LowerOutput);
+			this.tabPage_GoldenRatio.Controls.Add(this.fractionalInchTextBox_GoldenRatio_Input);
 			this.tabPage_GoldenRatio.Location = new System.Drawing.Point(4, 22);
 			this.tabPage_GoldenRatio.Name = "tabPage_GoldenRatio";
 			this.tabPage_GoldenRatio.Padding = new System.Windows.Forms.Padding(3);
@@ -280,33 +286,89 @@
 			this.tabPage_GoldenRatio.Text = "Golden Ratio";
 			this.tabPage_GoldenRatio.UseVisualStyleBackColor = true;
 			// 
-			// fractionalInchTextBox1
+			// textBox_GoldenRatio_UpperOutput
 			// 
-			this.fractionalInchTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
-			this.fractionalInchTextBox1.Denominator = FlintLib.Geometrics.CustomaryDenominators.HundredTwentyEighth;
-			this.fractionalInchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.fractionalInchTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(101)))), ((int)(((byte)(0)))));
-			this.fractionalInchTextBox1.Location = new System.Drawing.Point(21, 43);
-			this.fractionalInchTextBox1.Name = "fractionalInchTextBox1";
-			this.fractionalInchTextBox1.Size = new System.Drawing.Size(100, 20);
-			this.fractionalInchTextBox1.TabIndex = 0;
-			this.fractionalInchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.textBox_GoldenRatio_UpperOutput.Location = new System.Drawing.Point(272, 40);
+			this.textBox_GoldenRatio_UpperOutput.Name = "textBox_GoldenRatio_UpperOutput";
+			this.textBox_GoldenRatio_UpperOutput.ReadOnly = true;
+			this.textBox_GoldenRatio_UpperOutput.Size = new System.Drawing.Size(100, 20);
+			this.textBox_GoldenRatio_UpperOutput.TabIndex = 2;
+			this.textBox_GoldenRatio_UpperOutput.TabStop = false;
+			// 
+			// textBox_GoldenRatio_LowerOutput
+			// 
+			this.textBox_GoldenRatio_LowerOutput.Location = new System.Drawing.Point(272, 14);
+			this.textBox_GoldenRatio_LowerOutput.Name = "textBox_GoldenRatio_LowerOutput";
+			this.textBox_GoldenRatio_LowerOutput.ReadOnly = true;
+			this.textBox_GoldenRatio_LowerOutput.Size = new System.Drawing.Size(100, 20);
+			this.textBox_GoldenRatio_LowerOutput.TabIndex = 1;
+			this.textBox_GoldenRatio_LowerOutput.TabStop = false;
+			// 
+			// fractionalInchTextBox_GoldenRatio_Input
+			// 
+			this.fractionalInchTextBox_GoldenRatio_Input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(156)))));
+			this.fractionalInchTextBox_GoldenRatio_Input.Denominator = FlintLib.Geometrics.ImperialDenominators.ThirtySecond;
+			this.fractionalInchTextBox_GoldenRatio_Input.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.fractionalInchTextBox_GoldenRatio_Input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(101)))), ((int)(((byte)(0)))));
+			this.fractionalInchTextBox_GoldenRatio_Input.Location = new System.Drawing.Point(102, 14);
+			this.fractionalInchTextBox_GoldenRatio_Input.Name = "fractionalInchTextBox_GoldenRatio_Input";
+			this.fractionalInchTextBox_GoldenRatio_Input.Size = new System.Drawing.Size(100, 20);
+			this.fractionalInchTextBox_GoldenRatio_Input.TabIndex = 0;
+			this.fractionalInchTextBox_GoldenRatio_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(127, 43);
+			this.textBox1.Location = new System.Drawing.Point(423, 14);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
 			this.textBox1.Size = new System.Drawing.Size(100, 20);
-			this.textBox1.TabIndex = 1;
+			this.textBox1.TabIndex = 4;
+			this.textBox1.TabStop = false;
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(233, 43);
+			this.textBox2.Location = new System.Drawing.Point(423, 40);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.ReadOnly = true;
 			this.textBox2.Size = new System.Drawing.Size(100, 20);
-			this.textBox2.TabIndex = 2;
+			this.textBox2.TabIndex = 3;
+			this.textBox2.TabStop = false;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(388, 17);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(29, 13);
+			this.label8.TabIndex = 5;
+			this.label8.Text = "Error";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(388, 43);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(29, 13);
+			this.label9.TabIndex = 6;
+			this.label9.Text = "Error";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(230, 43);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(36, 13);
+			this.label10.TabIndex = 8;
+			this.label10.Text = "Upper";
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(230, 17);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(36, 13);
+			this.label11.TabIndex = 7;
+			this.label11.Text = "Lower";
 			// 
 			// MainForm
 			// 
@@ -327,15 +389,15 @@
 
 		#endregion
 
-		private FractionalInchTextBox fractionalInchTextBox_AX;
-		private FractionalInchTextBox fractionalInchTextBox_AY;
-		private FractionalInchTextBox fractionalInchTextBox_AZ;
-		private System.Windows.Forms.TextBox textBox_ALength;
-		private System.Windows.Forms.TextBox textBox_BLength;
-		private FractionalInchTextBox fractionalInchTextBox_BZ;
-		private FractionalInchTextBox fractionalInchTextBox_BY;
-		private FractionalInchTextBox fractionalInchTextBox_BX;
-		private System.Windows.Forms.TextBox textBox_Angle;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_AX;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_AY;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_AZ;
+		private System.Windows.Forms.TextBox textBox_3dAngle_ALength;
+		private System.Windows.Forms.TextBox textBox_3dAngle_BLength;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_BZ;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_BY;
+		private FractionalInchTextBox fractionalInchTextBox_3dAngle_BX;
+		private System.Windows.Forms.TextBox textBox_3dAngle_Angle;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;

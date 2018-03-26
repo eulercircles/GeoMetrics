@@ -56,7 +56,7 @@ namespace GeoMetrics
 				CustomaryLength.TryParse(Text, out CustomaryLength? parsedValue);
 				if (parsedValue.HasValue)
 				{
-					Text = parsedValue.Value.ToFractionalInchString();
+					Text = parsedValue.Value.ToFractionalInchString(_denominator);
 					Font = _normalFont;
 					BackColor = Colors.GoodBackground;
 					ForeColor = Colors.GoodForeground;

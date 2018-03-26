@@ -84,19 +84,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FlintLib\FlintLib\FlintLib.Common\FlintLib.Common.csproj">
+    <ProjectReference Include="..\..\..\Libraries\FlintLib\FlintLib\FlintLib.Common\FlintLib.Common.csproj">
       <Project>{5deea8b9-fe52-4fcb-b9b5-a14fc50a27a1}</Project>
       <Name>FlintLib.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\FlintLib\FlintLib\FlintLib.Diagnostics\FlintLib.Diagnostics.csproj">
+    <ProjectReference Include="..\..\..\Libraries\FlintLib\FlintLib\FlintLib.Diagnostics\FlintLib.Diagnostics.csproj">
       <Project>{1c762692-e7ae-4de2-b107-86017143ce21}</Project>
       <Name>FlintLib.Diagnostics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\FlintLib\FlintLib\FlintLib.Geometrics\FlintLib.Geometrics.csproj">
+    <ProjectReference Include="..\..\..\Libraries\FlintLib\FlintLib\FlintLib.Geometrics\FlintLib.Geometrics.csproj">
       <Project>{782701c3-59f4-49f0-9c15-740414456712}</Project>
       <Name>FlintLib.Geometrics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\FlintLib\FlintLib\FlintLib.Mathematics\FlintLib.Mathematics.csproj">
+    <ProjectReference Include="..\..\..\Libraries\FlintLib\FlintLib\FlintLib.Mathematics\FlintLib.Mathematics.csproj">
       <Project>{07b70176-9762-463f-ae1a-ce0f09b684b4}</Project>
       <Name>FlintLib.Mathematics</Name>
     </ProjectReference>
